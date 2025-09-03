@@ -768,7 +768,9 @@ const App = () => {
                   <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <div className="text-gray-700">
                     <a 
-                      href="#" 
+                      href="https://notebooklm.google.com/notebook/0a570834-4629-49be-bbb0-c7f3a4dfea76?authuser=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 inline-block"
                     >
                       Copy Assistant
