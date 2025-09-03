@@ -574,7 +574,7 @@ const App = () => {
 
           {/* Opt-Out Rate */}
           <div className="mb-16">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Opt-Out Rate (0.21%)</h3>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6">Opt-Out Rate (4.72%)</h3>
             <p className="text-lg text-gray-600 mb-6">The percentage of recipients who unsubscribe after receiving an email.</p>
             
             <div className="bg-gray-50 rounded-xl p-8 mb-6">
