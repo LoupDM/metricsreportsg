@@ -1,0 +1,198 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+  }
+}
+
+@layer components {
+  .metric-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .metric-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, theme(colors.orange.500), theme(colors.green.500), transparent);
+    transition: left 0.5s ease;
+  }
+  
+  .metric-card:hover::before {
+    left: 100%;
+  }
+  
+  .metric-hover {
+    transition: all 0.3s ease;
+  }
+  
+  .metric-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .performance-card {
+    transition: all 0.3s ease;
+  }
+  
+  .performance-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subject-line-card {
+    transition: all 0.3s ease;
+  }
+  
+  .subject-line-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .case-study-metric {
+    transition: all 0.3s ease;
+  }
+  
+  .case-study-metric:hover {
+    transform: scale(1.05);
+  }
+  
+  .next-step-card {
+    transition: all 0.3s ease;
+  }
+  
+  .next-step-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
+  .table-row-hover {
+    transition: all 0.2s ease;
+  }
+  
+  .campaign-highlight {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .campaign-highlight::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, theme(colors.orange.500), theme(colors.green.500));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  
+  .campaign-highlight:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .recommendation-card {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .recommendation-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  .recommendation-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, theme(colors.orange.500), theme(colors.green.500));
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .recommendation-card:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+  }
+  
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff6b35, #10b981);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #e55a2b, #0d9668);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+[role="button"]:focus {
+  outline: 2px solid theme(colors.orange.500);
+  outline-offset: 2px;
+}
