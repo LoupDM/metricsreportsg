@@ -335,11 +335,11 @@ const App = () => {
           </div>
 
           {/* Delivery Rate */}
-          <div className="mb-16">
+          <div className="mb-16 bg-blue-50 rounded-xl p-8 border border-blue-100">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Delivery Rate (96.77%)</h3>
             <p className="text-lg text-gray-600 mb-6">The percentage of emails that successfully reach recipients' inboxes.</p>
             
-            <div className="bg-gray-50 rounded-xl p-8 mb-6">
+            <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">What Affects It:</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
@@ -357,9 +357,9 @@ const App = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-6 border-l-4 border-orange-500">
+            <div className="bg-white rounded-xl p-6 border-l-4 border-blue-500 shadow-sm">
               <div className="flex items-center mb-2">
-                <TrendingUp className="w-5 h-5 text-orange-600 mr-2" />
+                <TrendingUp className="w-5 h-5 text-blue-600 mr-2" />
                 <h4 className="text-lg font-semibold text-gray-800">Findings</h4>
               </div>
               <p className="text-gray-700">Delivery rate is excellent and needs no major changes</p>
@@ -367,11 +367,11 @@ const App = () => {
           </div>
 
           {/* Open Rate */}
-          <div className="mb-16">
+          <div className="mb-16 bg-green-50 rounded-xl p-8 border border-green-100">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Open Rate (26.17%)</h3>
             <p className="text-lg text-gray-600 mb-6">The percentage of delivered emails that recipients open.</p>
             
-            <div className="bg-gray-50 rounded-xl p-8 mb-6">
+            <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">What Affects It:</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
@@ -393,9 +393,9 @@ const App = () => {
               </ul>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-6 mb-8 border-l-4 border-orange-500">
+            <div className="bg-white rounded-xl p-6 mb-8 border-l-4 border-green-500 shadow-sm">
               <div className="flex items-center mb-2">
-                <TrendingUp className="w-5 h-5 text-orange-600 mr-2" />
+                <TrendingUp className="w-5 h-5 text-green-600 mr-2" />
                 <h4 className="text-lg font-semibold text-gray-800">Findings</h4>
               </div>
               <p className="text-gray-700 mb-3">
@@ -407,10 +407,10 @@ const App = () => {
             </div>
 
             {/* Subject Line Building Guidelines */}
-            <div className="bg-orange-50 rounded-xl border-2 border-orange-200">
+            <div className="bg-white rounded-xl border-2 border-green-200 shadow-sm">
               <button
                 onClick={() => setIsGuidelinesOpen(!isGuidelinesOpen)}
-                className="w-full p-8 text-left hover:bg-orange-100 transition-colors duration-200 rounded-xl"
+                className="w-full p-8 text-left hover:bg-green-50 transition-colors duration-200 rounded-xl"
               >
                 <div className="flex items-center justify-between">
                   <h4 className="text-2xl font-bold text-gray-800">Subject Line Building Guidelines</h4>
@@ -430,15 +430,15 @@ const App = () => {
                     </p>
                     <ul className="space-y-3 text-gray-700">
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span><strong>User specific language</strong> (Location, Industry, Role, Name, Company Name)</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span><strong>Direct user benefit</strong> (dollar amount, feature, problem solution, convenience)</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span><strong>Focused branding</strong> (Brand name + direct benefit relationship)</span>
                       </li>
                       <li className="flex items-start">
@@ -454,11 +454,11 @@ const App = () => {
                       <div className="space-y-3">
                         <div className="bg-white p-3 rounded border-l-4 border-orange-500">
                           <p className="font-medium text-gray-800">BRUNT. Our newest brand partner has arrived.</p>
-                          <p className="text-sm text-orange-600">(23% OR)</p>
+                          <p className="text-sm text-green-600">(23% OR)</p>
                         </div>
                         <div className="bg-white p-3 rounded border-l-4 border-orange-500">
                           <p className="font-medium text-gray-800">Savannah: There's a new way to get your safety shoes.</p>
-                          <p className="text-sm text-orange-600">(36% OR)</p>
+                          <p className="text-sm text-green-600">(36% OR)</p>
                         </div>
                       </div>
                     </div>
@@ -482,10 +482,10 @@ const App = () => {
           </div>
 
           {/* Click-Through Rate */}
-          <div className="mb-16">
+          <div className="mb-16 bg-purple-50 rounded-xl p-8 border border-purple-100">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Click-Through Rate (CTR)/ Click-to-Open Rate (CToR)</h3>
             
-            <div className="bg-gray-50 rounded-xl p-8 mb-6">
+            <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">What It Means:</h4>
               <ul className="space-y-2 text-gray-700">
                 <li><strong>CTR:</strong> The percentage of delivered emails where recipients clicked on links.</li>
@@ -495,93 +495,93 @@ const App = () => {
 
             <div className="space-y-8">
               {/* Email Content */}
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Email Content</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Expectation Match:</strong> Content delivers on subject line/preheader promise.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Urgency:</strong> Time-sensitive offers or deadlines, upcoming events.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Value Proposition:</strong> Clear benefit for clicking. Problem user has and solution we are offering.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Compelling Copy:</strong> Persuasive, benefit-focused writing.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Trust Elements:</strong> Testimonials, certifications, guarantees.</span>
                   </li>
                 </ul>
               </div>
 
               {/* Call-to-Action */}
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Call-to-Action (CTA)</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Buttons:</strong> The text should be clear, action-oriented ("Shop Now", "Get Started"). They should be prominent and easy to spot at a glance, with multiple locations for easy/immediate action.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Multiple Options:</strong> Different ways to engage (phone, email, website link).</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Clarity:</strong> Obvious what happens when clicked and what actions will be needed from the user.</span>
                   </li>
                 </ul>
               </div>
 
               {/* Targeting */}
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Targeting</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Audience Relevance:</strong> Knowing the audience and relating the message to them.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>List Size:</strong> Ideal range is between 2000-5000 contacts. Up to 15,000.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Segmentation:</strong> Tailored content for specific groups broken into lists.</span>
                   </li>
                 </ul>
               </div>
 
               {/* Design */}
-              <div className="bg-gray-50 rounded-xl p-6">
+              <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Design</h4>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Spacing:</strong> Makes good use of the top half of the email to hook users.</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Visual Hierarchy:</strong> Easy to scan and read. (67% of SG users fully read emails as opposed to skimming.)</span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                     <span><strong>Mobile Optimization:</strong> Works on all devices. ~50% of users prefer mobile.</span>
                   </li>
                 </ul>
               </div>
             </div>
 
-            <div className="bg-gray-100 rounded-xl p-6 mt-8 border-l-4 border-orange-500">
+            <div className="bg-white rounded-xl p-6 mt-8 border-l-4 border-purple-500 shadow-sm">
               <div className="flex items-center mb-2">
-                <TrendingUp className="w-5 h-5 text-orange-600 mr-2" />
+                <TrendingUp className="w-5 h-5 text-purple-600 mr-2" />
                 <h4 className="text-lg font-semibold text-gray-800">Findings</h4>
               </div>
               <p className="text-gray-700">
@@ -591,23 +591,23 @@ const App = () => {
           </div>
 
           {/* Opt-Out Rate */}
-          <div className="mb-16">
+          <div className="mb-16 bg-red-50 rounded-xl p-8 border border-red-100">
             <h3 className="text-2xl font-semibold text-gray-800 mb-6">Opt-Out Rate (4.72%)</h3>
             <p className="text-lg text-gray-600 mb-6">The percentage of recipients who unsubscribe after receiving an email.</p>
             
-            <div className="bg-gray-50 rounded-xl p-8 mb-6">
+            <div className="bg-white rounded-xl p-8 mb-6 shadow-sm">
               <h4 className="text-xl font-semibold text-gray-800 mb-4">What Affects It:</h4>
               <ul className="space-y-3 text-gray-700">
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <span><strong>Content Relevance:</strong> Emails that don't match subscriber interests</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <span><strong>Frequency:</strong> Too many emails can lead to fatigue</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                  <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                   <span><strong>Expectation Mismatch:</strong> Content differs from what was promised at signup</span>
                 </li>
               </ul>
