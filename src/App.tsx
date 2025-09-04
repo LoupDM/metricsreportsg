@@ -4,6 +4,7 @@ import { Menu, X, BarChart3, TrendingUp, Users, Mail, Target, Clock, Eye, MouseP
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('overview');
+  const [isGuidelinesOpen, setIsGuidelinesOpen] = useState(false);
 
   const sections = [
     { id: 'overview', label: 'Overview' },
@@ -406,60 +407,77 @@ const App = () => {
             </div>
 
             {/* Subject Line Building Guidelines */}
-            <div className="bg-orange-50 rounded-xl p-8 border-2 border-orange-200">
-              <h4 className="text-2xl font-bold text-gray-800 mb-6 text-center">Subject Line Building Guidelines</h4>
-              <div className="bg-white rounded-lg p-6 mb-6">
-                <p className="text-lg text-gray-700 mb-4">
-                  Includes at least 1 of the following. Sweet spot is using 2 at a time.
-                </p>
-                <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>User specific language</strong> (Location, Industry, Role, Name, Company Name)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>Direct user benefit</strong> (dollar amount, feature, problem solution, convenience)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>Focused branding</strong> (Brand name + direct benefit relationship)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    <span><strong>Urgency/Relevance</strong> (Limited time, curiosity builder, user relevance to message - why should they care?)</span>
-                  </li>
-                </ul>
-              </div>
+            <div className="bg-orange-50 rounded-xl border-2 border-orange-200">
+              <button
+                onClick={() => setIsGuidelinesOpen(!isGuidelinesOpen)}
+                className="w-full p-8 text-left hover:bg-orange-100 transition-colors duration-200 rounded-xl"
+              >
+                <div className="flex items-center justify-between">
+                  <h4 className="text-2xl font-bold text-gray-800">Subject Line Building Guidelines</h4>
+                  <ChevronDown 
+                    className={`w-6 h-6 text-gray-600 transition-transform duration-300 ${
+                      isGuidelinesOpen ? 'rotate-180' : ''
+                    }`}
+                  />
+                </div>
+              </button>
+              
+              {isGuidelinesOpen && (
+                <div className="px-8 pb-8 animate-fade-in">
+                  <div className="bg-white rounded-lg p-6 mb-6">
+                    <p className="text-lg text-gray-700 mb-4">
+                      Includes at least 1 of the following. Sweet spot is using 2 at a time.
+                    </p>
+                    <ul className="space-y-3 text-gray-700">
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span><strong>User specific language</strong> (Location, Industry, Role, Name, Company Name)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span><strong>Direct user benefit</strong> (dollar amount, feature, problem solution, convenience)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span><strong>Focused branding</strong> (Brand name + direct benefit relationship)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-yellow-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span><strong>Urgency/Relevance</strong> (Limited time, curiosity builder, user relevance to message - why should they care?)</span>
+                      </li>
+                    </ul>
+                  </div>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-                  <h5 className="text-lg font-semibold text-gray-800 mb-4">Good Examples</h5>
-                  <div className="space-y-3">
-                    <div className="bg-white p-3 rounded border-l-4 border-orange-500">
-                      <p className="font-medium text-gray-800">BRUNT. Our newest brand partner has arrived.</p>
-                      <p className="text-sm text-orange-600">(23% OR)</p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                      <h5 className="text-lg font-semibold text-gray-800 mb-4">Good Examples</h5>
+                      <div className="space-y-3">
+                        <div className="bg-white p-3 rounded border-l-4 border-orange-500">
+                          <p className="font-medium text-gray-800">BRUNT. Our newest brand partner has arrived.</p>
+                          <p className="text-sm text-orange-600">(23% OR)</p>
+                        </div>
+                        <div className="bg-white p-3 rounded border-l-4 border-orange-500">
+                          <p className="font-medium text-gray-800">Savannah: There's a new way to get your safety shoes.</p>
+                          <p className="text-sm text-orange-600">(36% OR)</p>
+                        </div>
+                      </div>
                     </div>
-                    <div className="bg-white p-3 rounded border-l-4 border-orange-500">
-                      <p className="font-medium text-gray-800">Savannah: There's a new way to get your safety shoes.</p>
-                      <p className="text-sm text-orange-600">(36% OR)</p>
+                    <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                      <h5 className="text-lg font-semibold text-gray-800 mb-4">Less Good Examples</h5>
+                      <div className="space-y-3">
+                        <div className="bg-white p-3 rounded border-l-4 border-gray-400">
+                          <p className="font-medium text-gray-800">Timberland PRO® just got even better.</p>
+                          <p className="text-sm text-gray-600">(17% OR)</p>
+                        </div>
+                        <div className="bg-white p-3 rounded border-l-4 border-gray-400">
+                          <p className="font-medium text-gray-800">Summer work shoe shopping has begun.</p>
+                          <p className="text-sm text-gray-600">(9% OR)</p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-lg p-6 border border-gray-200">
-                  <h5 className="text-lg font-semibold text-gray-800 mb-4">Less Good Examples</h5>
-                  <div className="space-y-3">
-                    <div className="bg-white p-3 rounded border-l-4 border-gray-400">
-                      <p className="font-medium text-gray-800">Timberland PRO® just got even better.</p>
-                      <p className="text-sm text-gray-600">(17% OR)</p>
-                    </div>
-                    <div className="bg-white p-3 rounded border-l-4 border-gray-400">
-                      <p className="font-medium text-gray-800">Summer work shoe shopping has begun.</p>
-                      <p className="text-sm text-gray-600">(9% OR)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              )}
             </div>
           </div>
 
